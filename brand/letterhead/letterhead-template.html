@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ascend Lettings — Letterhead</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0B1F3A;
+    --gold:#C9A84C;
+    --charcoal:#1A202C;
+    --grey:#4A5568;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; background:#e9e9e9; }
+  body{ font-family:'Inter', Arial, sans-serif; color:var(--charcoal); }
+
+  .page{
+    position:relative;
+    width:210mm;
+    min-height:297mm;
+    margin:24px auto;
+    background:#ffffff;
+    box-shadow:0 6px 24px rgba(0,0,0,0.15);
+    border-right:6px solid var(--gold);   /* thin gold vertical accent */
+    display:flex;
+    flex-direction:column;
+  }
+
+  /* Header */
+  .lh-header{
+    background:var(--navy);
+    color:#fff;
+    padding:18px 28px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .lh-brand{ display:flex; align-items:center; gap:14px; }
+  .lh-mark{ width:46px; height:46px; }
+  .lh-name{ font-family:'Playfair Display', Georgia, serif; font-size:26px; font-weight:700; line-height:1; }
+  .lh-sub{ font-size:11px; font-weight:500; letter-spacing:5px; color:var(--gold); margin-top:2px; }
+  .lh-contact{ text-align:right; font-size:12px; line-height:1.7; }
+  .lh-contact a{ color:#fff; text-decoration:none; }
+  .lh-contact .web{ color:var(--gold); font-weight:600; }
+
+  /* Gold separator under header */
+  .lh-rule{ height:2px; background:var(--gold); margin:0 28px; }
+
+  /* Body */
+  .lh-body{
+    flex:1 1 auto;
+    padding:34px 28px;
+    font-size:14px;
+    line-height:1.7;
+    color:var(--charcoal);
+  }
+  .lh-placeholder{ color:var(--grey); }
+
+  /* Footer */
+  .lh-footer{
+    background:var(--navy);
+    color:#fff;
+    font-size:9.5px;
+    text-align:center;
+    padding:10px 20px;
+    line-height:1.5;
+  }
+
+  @media print{
+    html,body{ background:#fff; }
+    .page{ margin:0; box-shadow:none; width:auto; min-height:auto; }
+    @page{ size:A4; margin:0; }
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header class="lh-header">
+      <div class="lh-brand">
+        <svg class="lh-mark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" aria-hidden="true">
+          <g fill="#C9A84C">
+            <polygon points="8,88 8,64 24,58 24,88"/>
+            <polygon points="36,88 36,44 52,38 52,88"/>
+            <polygon points="64,88 64,22 80,16 80,88"/>
+          </g>
+        </svg>
+        <div>
+          <div class="lh-name">Ascend</div>
+          <div class="lh-sub">LETTINGS</div>
+        </div>
+      </div>
+      <div class="lh-contact">
+        <a href="tel:+442034324165">020 3432 4165</a><br>
+        <a href="mailto:info@ascendlettings.co.uk">info@ascendlettings.co.uk</a><br>
+        <a class="web" href="https://www.ascendlettings.co.uk">www.ascendlettings.co.uk</a>
+      </div>
+    </header>
+
+    <div class="lh-rule"></div>
+
+    <main class="lh-body">
+      <p class="lh-placeholder">[Letter content here]</p>
+    </main>
+
+    <footer class="lh-footer">
+      Ascend Lettings &nbsp;|&nbsp; info@ascendlettings.co.uk &nbsp;|&nbsp; 020 3432 4165 &nbsp;|&nbsp; www.ascendlettings.co.uk &nbsp;|&nbsp; ICO Registered [ICO REGISTRATION NUMBER] &nbsp;|&nbsp; Property Redress Scheme [PRS NUMBER] &nbsp;|&nbsp; &copy; 2026 Ascend Lettings
+    </footer>
+  </div>
+</body>
+</html>

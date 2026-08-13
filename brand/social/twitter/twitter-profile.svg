@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400" role="img" aria-label="Ascend Lettings Twitter profile">
+  <title>Ascend Lettings — Twitter Profile</title>
+  <rect width="400" height="400" fill="#0B1F3A"/>
+  <!-- White ascending icon -->
+  <g transform="translate(140,90) scale(1.2)" fill="#FFFFFF">
+    <polygon points="8,88 8,64 24,58 24,88"/>
+    <polygon points="36,88 36,44 52,38 52,88"/>
+    <polygon points="64,88 64,22 80,16 80,88"/>
+  </g>
+  <text x="200" y="330" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="80" font-weight="700" letter-spacing="4" fill="#FFFFFF">AL</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" width="1080" height="1080" role="img" aria-label="Ascend Lettings Instagram post template">
+  <title>Ascend Lettings — Instagram Post Template</title>
+  <!-- Off-white content area -->
+  <rect width="1080" height="1080" fill="#F7F5F2"/>
+  <!-- Navy header band with logo -->
+  <rect x="0" y="0" width="1080" height="180" fill="#0B1F3A"/>
+  <g transform="translate(60,54) scale(0.82)" fill="#C9A84C">
+    <polygon points="8,88 8,64 24,58 24,88"/>
+    <polygon points="36,88 36,44 52,38 52,88"/>
+    <polygon points="64,88 64,22 80,16 80,88"/>
+  </g>
+  <text x="170" y="98" font-family="'Playfair Display', Georgia, serif" font-size="52" font-weight="700" fill="#FFFFFF">Ascend</text>
+  <text x="172" y="140" font-family="'Inter', Arial, sans-serif" font-size="24" font-weight="500" letter-spacing="9" fill="#C9A84C">LETTINGS</text>
+  <!-- Content area placeholder -->
+  <text x="540" y="470" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="76" font-weight="700" fill="#0B1F3A">[ Your Headline ]</text>
+  <text x="540" y="560" text-anchor="middle" font-family="'Inter', Arial, sans-serif" font-size="34" font-weight="400" fill="#4A5568">Add your supporting message or caption here</text>
+  <rect x="440" y="620" width="200" height="6" rx="3" fill="#C9A84C"/>
+  <!-- Gold accent footer bar with URL -->
+  <rect x="0" y="990" width="1080" height="90" fill="#C9A84C"/>
+  <text x="540" y="1048" text-anchor="middle" font-family="'Inter', Arial, sans-serif" font-size="34" font-weight="600" letter-spacing="4" fill="#0B1F3A">www.ascendlettings.co.uk</text>
+</svg>
