@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 260" width="420" height="260" role="img" aria-label="Ascend Lettings">
+  <title>Ascend Lettings</title>
+  <g transform="translate(160,10)" fill="#C9A84C">
+    <polygon points="8,88 8,64 24,58 24,88" />
+    <polygon points="36,88 36,44 52,38 52,88" />
+    <polygon points="64,88 64,22 80,16 80,88" />
+  </g>
+  <text x="210" y="180" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="62" font-weight="700" fill="#0B1F3A">Ascend</text>
+  <text x="210" y="222" text-anchor="middle" font-family="'Inter', Arial, sans-serif" font-size="28" font-weight="500" letter-spacing="12" fill="#C9A84C">LETTINGS</text>
+</svg>
