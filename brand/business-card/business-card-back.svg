@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 600" width="1050" height="600" role="img" aria-label="Ascend Lettings business card back">
+  <title>Ascend Lettings — Business Card Back</title>
+  <rect width="1050" height="600" fill="#F7F5F2"/>
+  <!-- Large gold ascending icon centred -->
+  <g transform="translate(445,110) scale(1.6)" fill="#C9A84C">
+    <polygon points="8,88 8,64 24,58 24,88"/>
+    <polygon points="36,88 36,44 52,38 52,88"/>
+    <polygon points="64,88 64,22 80,16 80,88"/>
+  </g>
+  <text x="525" y="360" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="56" font-weight="700" fill="#0B1F3A">Ascend Lettings</text>
+  <rect x="325" y="395" width="400" height="3" fill="#C9A84C"/>
+  <!-- Contact details -->
+  <text x="525" y="450" text-anchor="middle" font-family="'Inter', Arial, sans-serif" font-size="26" font-weight="500" fill="#1A202C">020 3432 4165  |  info@ascendlettings.co.uk</text>
+  <text x="525" y="490" text-anchor="middle" font-family="'Inter', Arial, sans-serif" font-size="26" font-weight="600" fill="#0B1F3A">www.ascendlettings.co.uk</text>
+  <!-- Compliance -->
+  <text x="525" y="550" text-anchor="middle" font-family="'Inter', Arial, sans-serif" font-size="18" font-weight="400" fill="#4A5568">ICO Registered  |  Property Redress Scheme Member</text>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 794 1123" width="794" height="1123" role="img" aria-label="Ascend Lettings letterhead">
+  <title>Ascend Lettings — Letterhead</title>
+  <!-- Page -->
+  <rect width="794" height="1123" fill="#FFFFFF"/>
+  <!-- Top navy header band -->
+  <rect x="0" y="0" width="794" height="130" fill="#0B1F3A"/>
+  <!-- White logo left -->
+  <g transform="translate(48,34) scale(0.62)" fill="#FFFFFF">
+    <polygon points="8,88 8,64 24,58 24,88"/>
+    <polygon points="36,88 36,44 52,38 52,88"/>
+    <polygon points="64,88 64,22 80,16 80,88"/>
+  </g>
+  <text x="112" y="66" font-family="'Playfair Display', Georgia, serif" font-size="34" font-weight="700" fill="#FFFFFF">Ascend</text>
+  <text x="113" y="92" font-family="'Inter', Arial, sans-serif" font-size="14" font-weight="500" letter-spacing="6" fill="#C9A84C">LETTINGS</text>
+  <!-- Contact details right -->
+  <text x="746" y="52" text-anchor="end" font-family="'Inter', Arial, sans-serif" font-size="13" fill="#FFFFFF">020 3432 4165</text>
+  <text x="746" y="74" text-anchor="end" font-family="'Inter', Arial, sans-serif" font-size="13" fill="#FFFFFF">info@ascendlettings.co.uk</text>
+  <text x="746" y="96" text-anchor="end" font-family="'Inter', Arial, sans-serif" font-size="13" font-weight="600" fill="#C9A84C">www.ascendlettings.co.uk</text>
+  <!-- Thin gold vertical accent line (right corner) -->
+  <rect x="786" y="0" width="8" height="1123" fill="#C9A84C"/>
+  <!-- Thin gold horizontal separator below header -->
+  <rect x="48" y="158" width="698" height="2" fill="#C9A84C"/>
+  <!-- Body placeholder -->
+  <text x="48" y="230" font-family="'Inter', Arial, sans-serif" font-size="15" fill="#1A202C">[Letter content here]</text>
+  <!-- Footer navy band -->
+  <rect x="0" y="1075" width="794" height="48" fill="#0B1F3A"/>
+  <text x="397" y="1104" text-anchor="middle" font-family="'Inter', Arial, sans-serif" font-size="10" fill="#FFFFFF">Ascend Lettings | info@ascendlettings.co.uk | 020 3432 4165 | www.ascendlettings.co.uk | ICO Registered [ICO REGISTRATION NUMBER] | Property Redress Scheme [PRS NUMBER] | &#169; 2026 Ascend Lettings</text>
+</svg>
