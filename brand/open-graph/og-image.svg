@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Ascend Lettings — Professional Property Letting Made Simple">
+  <title>Ascend Lettings</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1F3A"/>
+      <stop offset="1" stop-color="#132B4E"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="8" fill="#C9A84C"/>
+  <rect x="0" y="622" width="1200" height="8" fill="#C9A84C"/>
+
+  <!-- Ascending mark -->
+  <g transform="translate(120,150) scale(1.6)" fill="#C9A84C">
+    <polygon points="8,88 8,64 24,58 24,88" />
+    <polygon points="36,88 36,44 52,38 52,88" />
+    <polygon points="64,88 64,22 80,16 80,88" />
+  </g>
+
+  <!-- Wordmark -->
+  <text x="120" y="400" font-family="'Playfair Display', Georgia, serif" font-size="96" font-weight="700" fill="#FFFFFF">Ascend <tspan fill="#C9A84C">Lettings</tspan></text>
+
+  <!-- Tagline -->
+  <text x="124" y="470" font-family="'Inter', Arial, sans-serif" font-size="40" font-weight="400" fill="#D9DEE6">Professional Property Letting Made Simple</text>
+
+  <!-- Contact strip -->
+  <text x="124" y="545" font-family="'Inter', Arial, sans-serif" font-size="28" font-weight="500" fill="#C9A84C" letter-spacing="2">www.ascendlettings.co.uk&#160;&#160;&#160;•&#160;&#160;&#160;020 3432 4165</text>
+</svg>
