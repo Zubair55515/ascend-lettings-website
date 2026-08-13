@@ -239,3 +239,7 @@ pages.build(globals())
 # Phase 2: service pages and legal pages
 import pages_phase2
 pages_phase2.build(globals())
+
+# Phase 3: blog index and articles
+import pages_phase3
+pages_phase3.build(globals())
