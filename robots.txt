@@ -1,0 +1,10 @@
+# robots.txt for Ascend Lettings
+User-agent: *
+Allow: /
+
+# Disallow build/config files
+Disallow: /build_site.py
+Disallow: /pages.py
+Disallow: /pages_phase2.py
+
+Sitemap: https://www.ascendlettings.co.uk/sitemap.xml
