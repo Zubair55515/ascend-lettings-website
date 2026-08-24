@@ -411,8 +411,11 @@ def build(g):
     services_req = ["Property Letting", "Tenant Find", "Rental Valuation", "Property Marketing", "General Enquiry"]
     status_opts = ["Currently Vacant", "Currently Tenanted", "Owner Occupied", "New Purchase", "Other"]
 
-    landlord_form = f'''<form class="form-card" data-validate id="landlord-form-el">
+    landlord_form = f'''<form class="form-card" data-validate id="landlord-form-el" action="mail-handler.php" method="POST">
       <div class="form-success">Thank you &mdash; your enquiry has been received. A member of the Ascend Lettings team will be in touch shortly.</div>
+      <div class="form-error"></div>
+      <input type="hidden" name="form_type" value="Landlord Enquiry">
+      <div class="hp-field" aria-hidden="true"><label>Leave this field blank</label><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
       <div class="form-grid">
         <div class="form-group"><label>Full Name <span class="req">*</span></label><input class="form-control" type="text" name="name" required><span class="field-error">Please enter your full name.</span></div>
         <div class="form-group"><label>Email Address <span class="req">*</span></label><input class="form-control" type="email" name="email" required><span class="field-error">Please enter a valid email address.</span></div>
@@ -504,8 +507,11 @@ def build(g):
         ("Move In", "Agree the tenancy and move into your new home."),
     ]
     tenant_steps_html = "".join(step_card(i+1, t, d) for i, (t, d) in enumerate(tenant_steps))
-    tenant_form = f'''<form class="form-card" data-validate id="tenant-form-el">
+    tenant_form = f'''<form class="form-card" data-validate id="tenant-form-el" action="mail-handler.php" method="POST">
       <div class="form-success">Thank you &mdash; your requirements have been registered. We'll be in touch as suitable properties become available.</div>
+      <div class="form-error"></div>
+      <input type="hidden" name="form_type" value="Tenant Requirements Registration">
+      <div class="hp-field" aria-hidden="true"><label>Leave this field blank</label><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
       <div class="form-grid">
         <div class="form-group"><label>Full Name <span class="req">*</span></label><input class="form-control" type="text" name="name" required><span class="field-error">Please enter your full name.</span></div>
         <div class="form-group"><label>Email Address <span class="req">*</span></label><input class="form-control" type="email" name="email" required><span class="field-error">Please enter a valid email address.</span></div>
@@ -645,8 +651,11 @@ def build(g):
 
     # ============ CONTACT ============
     subjects = ["Landlord Enquiry", "Tenant Enquiry", "Rental Valuation", "General Enquiry"]
-    contact_form = f'''<form class="form-card" data-validate id="contact-form-el">
+    contact_form = f'''<form class="form-card" data-validate id="contact-form-el" action="mail-handler.php" method="POST">
       <div class="form-success">Thank you for getting in touch. A member of the Ascend Lettings team will respond as soon as possible.</div>
+      <div class="form-error"></div>
+      <input type="hidden" name="form_type" value="Contact Form Enquiry">
+      <div class="hp-field" aria-hidden="true"><label>Leave this field blank</label><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
       <div class="form-grid">
         <div class="form-group"><label>Full Name <span class="req">*</span></label><input class="form-control" type="text" name="name" required><span class="field-error">Please enter your full name.</span></div>
         <div class="form-group"><label>Email Address <span class="req">*</span></label><input class="form-control" type="email" name="email" required><span class="field-error">Please enter a valid email address.</span></div>

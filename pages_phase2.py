@@ -58,8 +58,12 @@ def build(g):
     </div>'''
 
     def landlord_form(preselect="", heading="Get a Free Rental Valuation"):
-        return f'''<form class="form-card" data-validate id="landlord-form-el">
+        form_type = f"{preselect} Enquiry" if preselect else "Landlord Enquiry"
+        return f'''<form class="form-card" data-validate id="landlord-form-el" action="mail-handler.php" method="POST">
       <div class="form-success">Thank you &mdash; your enquiry has been received. A member of the Ascend Lettings team will be in touch shortly.</div>
+      <div class="form-error"></div>
+      <input type="hidden" name="form_type" value="{form_type}">
+      <div class="hp-field" aria-hidden="true"><label>Leave this field blank</label><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
       <div class="form-grid">
         <div class="form-group"><label>Full Name <span class="req">*</span></label><input class="form-control" type="text" name="name" required><span class="field-error">Please enter your full name.</span></div>
         <div class="form-group"><label>Email Address <span class="req">*</span></label><input class="form-control" type="email" name="email" required><span class="field-error">Please enter a valid email address.</span></div>
@@ -79,8 +83,11 @@ def build(g):
     </form>'''
 
     def valuation_form():
-        return f'''<form class="form-card" data-validate id="valuation-form-el">
+        return f'''<form class="form-card" data-validate id="valuation-form-el" action="mail-handler.php" method="POST">
       <div class="form-success">Thank you &mdash; your rental valuation request has been received. A member of the Ascend Lettings team will be in touch shortly.</div>
+      <div class="form-error"></div>
+      <input type="hidden" name="form_type" value="Rental Valuation Request">
+      <div class="hp-field" aria-hidden="true"><label>Leave this field blank</label><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
       <div class="form-grid">
         <div class="form-group"><label>Full Name <span class="req">*</span></label><input class="form-control" type="text" name="name" required><span class="field-error">Please enter your full name.</span></div>
         <div class="form-group"><label>Email Address <span class="req">*</span></label><input class="form-control" type="email" name="email" required><span class="field-error">Please enter a valid email address.</span></div>

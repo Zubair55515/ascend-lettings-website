@@ -34,7 +34,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link rel="stylesheet" href="assets/css/main.css?v=3db27451a5">
+  <link rel="stylesheet" href="assets/css/main.css?v=733a896424">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -178,8 +178,11 @@
           <h2 class="section-title">Request Your Free Rental Valuation</h2>
           <p class="section-lead">Complete the form below and we'll be in touch to discuss letting your property.</p>
         </div>
-        <div style="max-width:860px;margin:0 auto" class="reveal"><form class="form-card" data-validate id="landlord-form-el">
+        <div style="max-width:860px;margin:0 auto" class="reveal"><form class="form-card" data-validate id="landlord-form-el" action="mail-handler.php" method="POST">
       <div class="form-success">Thank you &mdash; your enquiry has been received. A member of the Ascend Lettings team will be in touch shortly.</div>
+      <div class="form-error"></div>
+      <input type="hidden" name="form_type" value="Landlord Enquiry">
+      <div class="hp-field" aria-hidden="true"><label>Leave this field blank</label><input type="text" name="website" tabindex="-1" autocomplete="off"></div>
       <div class="form-grid">
         <div class="form-group"><label>Full Name <span class="req">*</span></label><input class="form-control" type="text" name="name" required><span class="field-error">Please enter your full name.</span></div>
         <div class="form-group"><label>Email Address <span class="req">*</span></label><input class="form-control" type="email" name="email" required><span class="field-error">Please enter a valid email address.</span></div>
@@ -278,6 +281,6 @@
     </div>
   </div>
 
-  <script src="assets/js/main.js?v=05643a452c" defer></script>
+  <script src="assets/js/main.js?v=e17b89af8e" defer></script>
 </body>
 </html>

@@ -387,6 +387,12 @@ select.form-control { appearance: none; background-image: url("data:image/svg+xm
   padding: 1rem 1.25rem; border-radius: var(--radius); font-weight: 500; margin-bottom: 1.25rem;
 }
 .form-success.show { display: block; }
+.form-error {
+  display: none; background: var(--error-bg); border: 1.5px solid var(--error); color: var(--error);
+  padding: 1rem 1.25rem; border-radius: var(--radius); font-weight: 500; margin-bottom: 1.25rem;
+}
+.form-error.show { display: block; }
+.hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 
 /* ---------- FAQ accordion ---------- */
 .faq-list { max-width: 820px; margin: 0 auto; }

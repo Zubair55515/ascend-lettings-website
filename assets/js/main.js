@@ -153,13 +153,55 @@
           if (firstInvalid) firstInvalid.focus();
           return;
         }
+
         var success = form.querySelector('.form-success');
-        if (success) {
-          success.classList.add('show');
-          success.setAttribute('role', 'status');
+        var error = form.querySelector('.form-error');
+        var submitBtn = form.querySelector('button[type="submit"]');
+        if (error) error.classList.remove('show');
+        if (submitBtn) {
+          submitBtn.dataset.originalText = submitBtn.dataset.originalText || submitBtn.textContent;
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Sending…';
         }
-        form.reset();
-        if (success) success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+        var showError = function (message) {
+          if (error) {
+            error.textContent = message;
+            error.classList.add('show');
+            error.setAttribute('role', 'alert');
+            error.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        };
+
+        fetch(form.getAttribute('action') || 'mail-handler.php', {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'X-Requested-With': 'XMLHttpRequest' }
+        })
+          .then(function (res) {
+            return res.json().catch(function () { return { ok: res.ok }; });
+          })
+          .then(function (data) {
+            if (data && data.ok) {
+              if (success) {
+                success.classList.add('show');
+                success.setAttribute('role', 'status');
+                success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              }
+              form.reset();
+            } else {
+              showError((data && data.message) || 'Sorry, something went wrong. Please call or WhatsApp us instead.');
+            }
+          })
+          .catch(function () {
+            showError('Sorry, something went wrong sending your enquiry. Please check your connection and try again, or call/WhatsApp us instead.');
+          })
+          .finally(function () {
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.textContent = submitBtn.dataset.originalText;
+            }
+          });
       });
     });
   }

@@ -100,14 +100,25 @@ Everything in `brand/` follows the Ascend Lettings brand — navy, gold and off-
 2. **Log in to GoDaddy cPanel** (via your GoDaddy hosting dashboard).
 3. Open **File Manager**.
 4. Navigate to the **`public_html`** folder.
-5. **Upload all website files** — the HTML pages, the `assets/` folder, the `blog/` folder and the `brand/` folder. Upload **everything EXCEPT**:
+5. **Upload all website files** — the HTML pages, the `assets/` folder, the `blog/` folder, the `brand/` folder, and **`mail-handler.php`**. Upload **everything EXCEPT**:
    - `README.md`
    - the `.git/` folder
    - the Python build files (`build_site.py`, `pages.py`, `pages_phase2.py`, `pages_phase3.py`)
    - `.gitignore`
    > Tip: you can upload a ZIP of the site and use File Manager's **Extract** feature, then delete the excluded files.
-6. Ensure **`index.html` sits in the root of `public_html`** (not inside a sub-folder).
+6. Ensure **`index.html` sits in the root of `public_html`** (not inside a sub-folder), with `mail-handler.php` alongside it in the same root.
 7. Visit **https://www.ascendlettings.co.uk** to verify the site loads correctly, including the blog and images.
+
+---
+
+## Contact Form Email Delivery
+
+Every form on the site (Landlords, Tenants, Contact Us, and Rental Valuation — including the versions embedded on the Property Letting, Tenant Find and Property Marketing pages) submits to **`mail-handler.php`**, which emails the submission straight to **info@ascendlettings.co.uk**. The sender's own address is set as the **Reply-To**, so you can just hit reply from your inbox.
+
+- **Requirement:** the host must support PHP and its built-in `mail()` function. GoDaddy cPanel hosting supports this out of the box — no extra setup needed once `mail-handler.php` is uploaded to the same folder as `index.html`.
+- **Spam protection:** each form includes a hidden "honeypot" field real visitors never see or fill in; submissions that fill it are silently discarded.
+- **If emails don't arrive:** check your spam/junk folder first. If they're still missing, it's usually a deliverability issue with the shared hosting's outgoing mail (SPF/DNS) rather than the form itself — GoDaddy support can confirm `mail()` is enabled and correctly configured for your domain, or you can switch `mail-handler.php` to send via SMTP (e.g. with PHPMailer, using your `info@ascendlettings.co.uk` mailbox credentials) for more reliable delivery.
+- **Local/JavaScript-disabled fallback:** the forms progressively enhance — with JavaScript on, submissions are sent via a background request and the page shows an inline "thank you" message without reloading; without JavaScript, the browser submits the form normally and `mail-handler.php` redirects back to the page.
 
 ---
 
