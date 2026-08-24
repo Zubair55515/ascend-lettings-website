@@ -3,8 +3,19 @@
 Generates consistent HTML pages sharing header, footer, schema, cookie banner and WhatsApp float.
 """
 import os
+import hashlib
 
 BASE = os.path.dirname(os.path.abspath(__file__))
+
+def _asset_version(*paths):
+    h = hashlib.sha1()
+    for p in paths:
+        with open(os.path.join(BASE, p), "rb") as f:
+            h.update(f.read())
+    return h.hexdigest()[:10]
+
+CSS_VERSION = _asset_version("assets/css/main.css")
+JS_VERSION = _asset_version("assets/js/main.js")
 SITE = "https://www.ascendlettings.co.uk"
 PHONE_DISPLAY = "020 3432 4165"
 PHONE_TEL = "+442034324165"
@@ -108,7 +119,7 @@ def head(title, desc, canonical_file, og_type="website", extra_schema=""):
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/main.css?v={CSS_VERSION}">
   {org_schema}
   {extra_schema}
 </head>
@@ -220,7 +231,7 @@ def floats_and_scripts():
     </div>
   </div>
 
-  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/main.js?v={JS_VERSION}" defer></script>
 </body>
 </html>'''
 
