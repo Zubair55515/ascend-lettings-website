@@ -154,13 +154,42 @@ def build(g):
     <div class="trust-bar">
       <div class="container">
         <ul>
-          <li>{icon("shield","",18)} ICO Registered [ICO REGISTRATION NUMBER]</li>
-          <li>{icon("check","",18)} Property Redress Scheme Member [PROPERTY REDRESS SCHEME MEMBERSHIP NUMBER]</li>
+          <li>{icon("shield","",18)} ICO Certified</li>
+          <li>{icon("check","",18)} Property Redress Scheme Member</li>
           <li>{icon("award","",18)} Professional Letting Service</li>
           <li>{icon("chat","",18)} Transparent Communication</li>
         </ul>
       </div>
     </div>
+
+    <section class="section section--light logos-section">
+      <div class="container">
+        <div class="section-head center reveal">
+          <p class="eyebrow">Trusted &amp; Accredited</p>
+          <h2 class="section-title">Our Partners &amp; Accreditations</h2>
+        </div>
+        <div class="logo-carousel reveal" data-logo-carousel aria-roledescription="carousel" aria-label="Partner and accreditation logos">
+          <div class="logo-carousel-viewport">
+            <div class="logo-carousel-track" data-track>
+              <div class="logo-carousel-slide">
+                <div class="logo-item"><img src="assets/images/partners/ico.svg" alt="ICO Registered" loading="lazy" width="140" height="140"></div>
+                <div class="logo-item"><img src="assets/images/partners/spareroom.svg" alt="SpareRoom" loading="lazy" width="220" height="55"></div>
+                <div class="logo-item"><img src="assets/images/partners/simplybusiness.svg" alt="Simply Business" loading="lazy" width="220" height="58"></div>
+              </div>
+              <div class="logo-carousel-slide">
+                <div class="logo-item"><img src="assets/images/partners/onthemarket.svg" alt="OnTheMarket" loading="lazy" width="240" height="61"></div>
+                <div class="logo-item"><img src="assets/images/partners/prs.svg" alt="Property Redress Scheme" loading="lazy" width="230" height="55"></div>
+                <div class="logo-item"><img src="assets/images/partners/tds.svg" alt="TDS Tenancy Deposit Scheme" loading="lazy" width="180" height="65"></div>
+              </div>
+            </div>
+          </div>
+          <div class="logo-carousel-dots" role="tablist" aria-label="Logo slides">
+            <button class="logo-dot is-active" type="button" role="tab" aria-selected="true" aria-label="Show logos 1 to 3" data-dot="0"></button>
+            <button class="logo-dot" type="button" role="tab" aria-selected="false" aria-label="Show logos 4 to 6" data-dot="1"></button>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="section section--white">
       <div class="container">
@@ -295,7 +324,7 @@ def build(g):
             <p class="eyebrow">Who We Are</p>
             <h2 class="section-title">A Professional, Transparent Letting Agency</h2>
             <p>Ascend Lettings is a letting agency focused on doing the essentials well. We help landlords let their properties and support tenants in finding their next home, combining a professional service with clear, straightforward communication.</p>
-            <p>Our approach brings together sensible use of technology, careful attention to compliance, and genuine support for both landlords and tenants. We are ICO registered [ICO REGISTRATION NUMBER] and a member of the Property Redress Scheme [PROPERTY REDRESS SCHEME MEMBERSHIP NUMBER].</p>
+            <p>Our approach brings together sensible use of technology, careful attention to compliance, and genuine support for both landlords and tenants. We are ICO certified and a member of the Property Redress Scheme.</p>
             <p>As a letting agency, we concentrate on valuation, marketing, tenant find, referencing, Right to Rent and tenancy administration &mdash; getting your property from valuation to a completed tenancy.</p>
           </div>
         </div>
@@ -670,7 +699,7 @@ def build(g):
           <p class="section-lead">Complete the form and we'll be in touch as soon as possible.</p>
         </div>
         <div style="max-width:820px;margin:0 auto" class="reveal">{contact_form}</div>
-        <p class="text-center form-note mt-2" style="max-width:720px;margin-left:auto;margin-right:auto">Ascend Lettings is ICO registered [ICO REGISTRATION NUMBER] and a member of the Property Redress Scheme [PROPERTY REDRESS SCHEME MEMBERSHIP NUMBER]. We handle your personal information in line with UK GDPR.</p>
+        <p class="text-center form-note mt-2" style="max-width:720px;margin-left:auto;margin-right:auto">Ascend Lettings is ICO certified and a member of the Property Redress Scheme. We handle your personal information in line with UK GDPR.</p>
       </div>
     </section>
   </main>

@@ -14,6 +14,7 @@
     initScrollReveal();
     initWhatsAppFloat();
     initActiveNav();
+    initLogoCarousels();
   });
 
   /* ---------- Sticky header: transparent -> solid ---------- */
@@ -213,6 +214,52 @@
       if (y > 200) btn.style.opacity = '1';
       lastY = y;
     }, { passive: true });
+  }
+
+  /* ---------- Logo carousel: rotates groups of logos ---------- */
+  function initLogoCarousels() {
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.querySelectorAll('[data-logo-carousel]').forEach(function (carousel) {
+      var track = carousel.querySelector('[data-track]');
+      if (!track) return;
+      var slides = Array.prototype.slice.call(track.children);
+      var dots = Array.prototype.slice.call(carousel.querySelectorAll('[data-dot]'));
+      if (slides.length < 2) return;
+      var index = 0;
+      var timer = null;
+
+      var goTo = function (i) {
+        index = (i + slides.length) % slides.length;
+        track.style.transform = 'translateX(-' + (index * 100) + '%)';
+        dots.forEach(function (dot, di) {
+          var active = di === index;
+          dot.classList.toggle('is-active', active);
+          dot.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+      };
+
+      var start = function () {
+        if (reduceMotion) return;
+        stop();
+        timer = setInterval(function () { goTo(index + 1); }, 3500);
+      };
+      var stop = function () { if (timer) { clearInterval(timer); timer = null; } };
+
+      dots.forEach(function (dot) {
+        dot.addEventListener('click', function () {
+          goTo(parseInt(dot.getAttribute('data-dot'), 10));
+          start();
+        });
+      });
+
+      carousel.addEventListener('mouseenter', stop);
+      carousel.addEventListener('mouseleave', start);
+      carousel.addEventListener('focusin', stop);
+      carousel.addEventListener('focusout', start);
+
+      goTo(0);
+      start();
+    });
   }
 
   /* ---------- Active nav link highlighting ---------- */

@@ -821,7 +821,7 @@ def build(g):
     privacy_content = f'''
       <h2>1. Who We Are</h2>
       <p>This Privacy Policy explains how Ascend Lettings ("we", "us", "our") collects, uses and protects your personal information when you use our website or enquire about our letting services. Ascend Lettings is the data controller responsible for your personal information.</p>
-      <p>Ascend Lettings is registered with the Information Commissioner's Office (ICO). ICO Registration Number: [ICO REGISTRATION NUMBER]. If you have any questions about this policy or how we handle your data, please contact us at <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
+      <p>Ascend Lettings is registered with the Information Commissioner's Office (ICO) and is ICO certified. If you have any questions about this policy or how we handle your data, please contact us at <a href="mailto:{EMAIL}">{EMAIL}</a>.</p>
 
       <h2>2. What Data We Collect</h2>
       <p>We may collect and process the following categories of personal information:</p>
@@ -975,8 +975,7 @@ def build(g):
       <p>If your concern is not resolved, or you would prefer to put it in writing, please send us a written complaint by email to <a href="mailto:{EMAIL}">{EMAIL}</a>. We will acknowledge your written complaint promptly and carry out a full and fair investigation. We will then provide you with a written response setting out our findings and any proposed resolution.</p>
 
       <h2>Step 3: Escalation to the Property Redress Scheme</h2>
-      <p>Ascend Lettings is a member of the Property Redress Scheme. If you remain dissatisfied once our internal complaints process has been completed, or if we have been unable to resolve your complaint within the applicable timeframe, you may be entitled to refer your complaint to the Property Redress Scheme for independent review.</p>
-      <p>Property Redress Scheme Membership Number: [PROPERTY REDRESS SCHEME MEMBERSHIP NUMBER].</p>
+      <p>Ascend Lettings is a Property Redress Scheme member. If you remain dissatisfied once our internal complaints process has been completed, or if we have been unable to resolve your complaint within the applicable timeframe, you may be entitled to refer your complaint to the Property Redress Scheme for independent review.</p>
       <p>Property Redress Scheme contact details: [PROPERTY REDRESS SCHEME CONTACT INFORMATION].</p>
 
       <h2>Response Timeframes</h2>

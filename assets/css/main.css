@@ -283,6 +283,34 @@ strong { color: var(--charcoal); font-weight: 600; }
 .trust-bar li svg { color: var(--gold); flex-shrink: 0; }
 .trust-bar li:not(:last-child)::after { content: ""; }
 
+/* ---------- Logo carousel ---------- */
+.logo-carousel { max-width: 920px; margin: 0 auto; }
+.logo-carousel-viewport { overflow: hidden; }
+.logo-carousel-track { display: flex; transition: transform 0.6s ease; }
+.logo-carousel-slide {
+  display: flex; flex: 0 0 100%; align-items: center; justify-content: space-around;
+  gap: 2rem 2.5rem; flex-wrap: wrap; padding: 0.5rem 0;
+}
+.logo-item {
+  display: flex; align-items: center; justify-content: center;
+  height: 64px; flex: 1 1 140px; min-width: 120px; max-width: 220px;
+}
+.logo-item img {
+  max-height: 100%; max-width: 100%; width: auto; height: auto; object-fit: contain;
+  opacity: 0.85; filter: grayscale(15%); transition: opacity var(--transition), filter var(--transition), transform var(--transition);
+}
+.logo-item img:hover { opacity: 1; filter: grayscale(0%); transform: scale(1.05); }
+.logo-carousel-dots { display: flex; justify-content: center; gap: 0.5rem; margin-top: 1.5rem; }
+.logo-dot {
+  width: 9px; height: 9px; border-radius: 50%; border: none; padding: 0;
+  background: var(--border); cursor: pointer; transition: background var(--transition), transform var(--transition);
+}
+.logo-dot.is-active { background: var(--gold); transform: scale(1.2); }
+@media (max-width: 640px) {
+  .logo-carousel-slide { gap: 1.5rem; }
+  .logo-item { height: 52px; flex: 1 1 45%; }
+}
+
 /* ---------- Cards ---------- */
 .card {
   background: var(--white);
